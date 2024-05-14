@@ -1,0 +1,79 @@
+.library {
+  @include flexColumn;
+  background-color: $dark;
+  position: fixed;
+  width: 20rem;
+  top: 0;
+  left: 0;
+  height: 100%;
+  box-shadow: 2px 2px 30px rgb(148, 148, 148);
+  overflow: scroll;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  opacity: 0;
+  color: $bg;
+}
+
+.library_head {
+  width: 100%;
+  min-height: 90px;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem 1rem 2rem;
+  justify-content: space-between;
+  button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    .fa_times {
+      transform: scale(1.5);
+      &:focus {
+        outline: none;
+        border: none;
+      }
+      path {
+        fill: $bg;
+      }
+    }
+  }
+}
+
+.shown {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.songs {
+  @include flexColumn;
+}
+
+.selected {
+  background-color: $mid-dark;
+  transition: all 0.43s ease-out;
+
+  .song_description {
+    color: #6d6875;
+  }
+
+  &:hover {
+    background-color: $mid-dark;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .library {
+    h1 {
+      width: 20px;
+    }
+    width: 100vw;
+    align-items: center;
+  }
+  .library_head {
+    button {
+      .fa_times {
+        transform: scale(2);
+      }
+    }
+  }
+}
