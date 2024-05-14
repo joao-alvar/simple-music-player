@@ -1,6 +1,6 @@
-# React Music Player
+# Next.js Music Player
 
-React music player with functionality as expected: Play/Pause, Skip Forward/Back, Drag handler to change position in song and a library with a selection of Royalty Free study music.
+Next music player with functionality as expected: Play/Pause, Skip Forward/Back, Drag handler to change position in song and a library with a selection of Royalty Free study music.
 
 ## About the build
 
